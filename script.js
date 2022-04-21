@@ -7,6 +7,7 @@ function converterMoeda(){
     fetch(url).then((res)=>{
         return res.json();
     }).then((data)=>{
+        console.log(data)
         let rate = data[0].bid
         let total = rate * totalConversao;
         document.getElementById("currency").innerHTML = rate;
