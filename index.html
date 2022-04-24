@@ -25,7 +25,21 @@
     <h1>Temperatura maxima:</h1>
     <h4 id="weather_temp_max"></h4>
     <input type="button" value="Buscar" onclick="weatherApi()">
+
+    <h1>VALIDA CEP</h1>
+    <input type="text" name="cep" id="cep" placeholder="Digite o cep:">
+    <h4 id="viacep_cep"></h4>
+    <h2>Cidade:</h2>
+    <h4 id="viacep_cidade"></h4>
+    <h2>Estado:</h2>
+    <h4 id="viacep_estado"></h4>
+    <h2>Rua:</h2>
+    <h4 id="viacep_logradouro"></h4>
+    <input type="button" value="Buscar" onclick="validaCEP()">
+
+    <!-- SCRIPTS -->
     <script src="script.js"></script>
     <script src="weather.js"></script>
+    <script src="via_cep.js"></script>
 </body>
 </html>
