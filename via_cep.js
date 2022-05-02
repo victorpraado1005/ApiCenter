@@ -5,13 +5,14 @@ let returnJson = "/json"
 // console.log(finalURL)
 
 function validaCEP(){
-    let CEP = document.getElementById("cep")
+    let CEP = document.getElementById("cep").value
 
     let finalURL = URL_VIACEP + CEP + returnJson
 
     fetch(finalURL).then((res)=>{
         return res.json()
     }).then((data)=>{
+        console.log(data)
         let viacep_cep = data.cep
         let viacep_cidade = data.localidade
         let viacep_estado = data.uf
