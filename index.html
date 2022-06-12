@@ -4,42 +4,75 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Conversor de Moeda</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">    
 </head>
 <body>
-    <H1>Valor da Moeda:</H1>
-    <input type="text" name="moeda" id="moeda" placeholder="Digite a moeda que você deseja saber a conversão">
-    <h2 id="currency"></h2>
-    <H1>Total da conversão:</H1>
-    <input type="text" name="total" id="total" placeholder="Digite a quantidade que você deseja">
-    <h2 id="conversao"></h2>
-    <input type="button" value="Converter" onclick="converterMoeda()">
+    <button id="btnWeatherAPI" onclick="showWeatherAPI()">Weather API</button>
+    <button id="btnExchangeRatesAPI" onclick="showExchangeRatesAPI()">Exchange Rates API</button>
+    <button id="btnViaCepAPI" onclick="showViaCepAPI()">ViaCep API</button>
 
-    <H1>Digite a cidade:</H1>
-    <input type="text" name="city" id="city" placeholder="Digite a cidade que deseja buscar: ">
-    <h1>Nome da cidade:</h1>
-    <h4 id="weather_city_name"></h4>
-    <h1>Temperatura atual:</h1>
-    <h4 id="weather_temp"></h4>
-    <h1>Temperatura minima:</h1>
-    <h4 id="weather_temp_min"></h4>
-    <h1>Temperatura maxima:</h1>
-    <h4 id="weather_temp_max"></h4>
-    <input type="button" value="Buscar" onclick="weatherApi()">
+    <div id="exchangeRatesAPI" class="api__change__container" style="display: none;">
+        <H1>Valor da Moeda:</H1>
+        <input type="text" name="moeda" id="moeda" placeholder="Digite a moeda que você deseja saber a conversão">
+        <h2 id="currency"></h2>
+        <H1>Total da conversão:</H1>
+        <input type="text" name="total" id="total" placeholder="Digite a quantidade que você deseja">
+        <h2 id="conversao"></h2>
+        <input type="button" value="Converter" onclick="converterMoeda()">
+    </div>
+    
+    <div id="weatherAPI" class="api__weather__container" style="display: none;">
+        <H1>Digite a cidade:</H1>
+        <input type="text" name="city" id="city" placeholder="Digite a cidade que deseja buscar: ">
+        <h1>Nome da cidade:</h1>
+        <h4 id="weather_city_name"></h4>
+        <h1>Temperatura atual:</h1>
+        <h4 id="weather_temp"></h4>
+        <h1>Temperatura minima:</h1>
+        <h4 id="weather_temp_min"></h4>
+        <h1>Temperatura maxima:</h1>
+        <h4 id="weather_temp_max"></h4>
+        <input type="button" value="Buscar" onclick="weatherApi()">
+    </div>
 
-    <h1>VALIDA CEP</h1>
-    <input type="text" name="cep" id="cep" placeholder="Digite o cep:">
-    <h4 id="viacep_cep"></h4>
-    <h2>Cidade:</h2>
-    <h4 id="viacep_cidade"></h4>
-    <h2>Estado:</h2>
-    <h4 id="viacep_estado"></h4>
-    <h2>Rua:</h2>
-    <h4 id="viacep_logradouro"></h4>
-    <input type="button" value="Buscar" onclick="validaCEP()">
+    <div id="cepAPI" class="api__viaCep__container" style="display: none;">
+        <h1>VALIDA CEP</h1>
+        <input type="text" name="cep" id="cep" placeholder="Digite o cep:">
+        <h4 id="viacep_cep"></h4>
+        <h2>Cidade:</h2>
+        <h4 id="viacep_cidade"></h4>
+        <h2>Estado:</h2>
+        <h4 id="viacep_estado"></h4>
+        <h2>Rua:</h2>
+        <h4 id="viacep_logradouro"></h4>
+        <input type="button" value="Buscar" onclick="validaCEP()">
+    </div>
 
     <!-- SCRIPTS -->
-    <script src="script.js"></script>
-    <script src="weather.js"></script>
-    <script src="via_cep.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <script src="./scripts/script.js"></script>
+    <script src="./scripts/weather.js"></script>
+    <script src="./scripts/via_cep.js"></script>
+    <script>
+        $("#btnWeatherAPI").click(()=>{            
+            $("#weatherAPI").show()
+            $("#exchangeRatesAPI").hide()
+            $("#cepAPI").hide()
+        })
+
+        $("#btnExchangeRatesAPI").click(()=>{
+            $("#exchangeRatesAPI").show()
+            $("#weatherAPI").hide()
+            $("#cepAPI").hide()
+        })
+
+        $("#btnViaCepAPI").click(()=>{
+            $("#cepAPI").show()
+            $("#exchangeRatesAPI").hide()
+            $("#weatherAPI").hide()
+            
+        })
+    </script>
 </body>
 </html>
