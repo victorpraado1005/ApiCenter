@@ -41,7 +41,7 @@ body{
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    justify-content: center;
+    align-items: center;
     align-items: center;
     gap: 10px;
 }
@@ -98,6 +98,43 @@ span{
 }
 
 .api__weather__container h4{
+    font-size: 20px;
+}
+
+.currency__data{    
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    align-items: center;  
+}
+
+#total{
+    order: 3;
+}
+
+#currency{
+    order: 4;
+}
+
+.currency__data h5, input, select{
+    margin-bottom: 10px;
+}
+
+.currency__data input, select{
+    width: 200px;
+}
+
+.currency__result{
+    margin-top: 20px;
+    text-align: center;
+}
+
+.currency__result button{
+    margin-bottom: 20px;
+    width: 150px;
+}
+
+.api__change__container h1{
     font-size: 20px;
 }
 

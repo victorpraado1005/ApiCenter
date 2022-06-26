@@ -12,7 +12,7 @@
     <div class="container">
         <div class="btn_container">
             <button id="btnWeatherAPI" class="btn btn-primary" onclick="showWeatherAPI()">Weather API</button>
-            <button id="btnExchangeRatesAPI" class="btn btn-primary" onclick="showExchangeRatesAPI()">Exchange Rates API</button>
+            <button id="btnExchangeRatesAPI" class="btn btn-primary" onclick="showExchangeRatesAPI()">Câmbio BR</button>
             <button id="btnViaCepAPI" class="btn btn-primary" onclick="showViaCepAPI()">ViaCep API</button>
         </div>
 
@@ -35,13 +35,21 @@
         </div>
 
         <div id="exchangeRatesAPI" class="api__change__container" style="display: none;">
-            <H1>Valor da Moeda:</H1>
-            <input type="text" name="moeda" id="moeda" placeholder="Digite a moeda que você deseja saber a conversão">
-            <h2 id="currency"></h2>
-            <H1>Total da conversão:</H1>
-            <input type="text" name="total" id="total" placeholder="Digite a quantidade que você deseja">
-            <h2 id="conversao"></h2>
-            <input type="button" value="Converter" onclick="converterMoeda()">
+            <div class="currency__data">
+                <h5>Quantidade:</h5>
+                <input type="text" name="total" id="total" placeholder="Digite a quantidade">
+                <h5>Selecione a Moeda:</h5>
+                <select name="currency" id="currency">
+                    <option value="USD">Dólar</option>
+                    <option selected value="EUR">Euro</option>
+                    <option value="GBP">Libra</option>
+                </select>                                        
+            </div>
+            <div class="currency__result">         
+                <button class="btn btn-success" onclick="converterMoeda()">Converter</button>
+                <h4>Total:</h5>
+                <span id="conversao"></span>
+            </div>
         </div> 
 
         <div id="cepAPI" class="api__viaCep__container" style="display: none;">
@@ -64,7 +72,7 @@
 
     <!-- SCRIPTS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="./scripts/script.js"></script>
+    <script src="./scripts/api_money.js"></script>
     <script src="./scripts/weather.js"></script>
     <script src="./scripts/via_cep.js"></script>
     <script src="./scripts/app.js"></script>
