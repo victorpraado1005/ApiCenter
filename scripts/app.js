@@ -1,6 +1,6 @@
 $(document).ready(function () {
-    $("body").addClass('api_weather_background');
-    $("#weatherAPI").show()
+    $("body").addClass('api_viacep_background');
+    $("#cepAPI").show()
 })
 
 $("#btnWeatherAPI").click(()=>{            

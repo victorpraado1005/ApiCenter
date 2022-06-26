@@ -17,7 +17,7 @@
         </div>
 
         <div id="weatherAPI" class="api__weather__container" style="display: none;">
-            <div class="weather_header">
+            <div class="container_header">
                 <H1>Digite a cidade:</H1>
                 <input type="text" name="city" id="city" placeholder="Digite a cidade que deseja buscar: ">
                 <button class="btn btn-success" onclick="weatherApi()">Buscar</button>
@@ -42,21 +42,23 @@
             <input type="text" name="total" id="total" placeholder="Digite a quantidade que você deseja">
             <h2 id="conversao"></h2>
             <input type="button" value="Converter" onclick="converterMoeda()">
-        </div>
-    
-        
+        </div> 
 
         <div id="cepAPI" class="api__viaCep__container" style="display: none;">
-            <h1>VALIDA CEP</h1>
-            <input type="text" name="cep" id="cep" placeholder="Digite o cep:">
-            <h4 id="viacep_cep"></h4>
-            <h2>Cidade:</h2>
-            <h4 id="viacep_cidade"></h4>
-            <h2>Estado:</h2>
-            <h4 id="viacep_estado"></h4>
-            <h2>Rua:</h2>
-            <h4 id="viacep_logradouro"></h4>
-            <input type="button" value="Buscar" onclick="validaCEP()">
+            <div class="container_header">
+                <h1>VALIDA CEP</h1>
+                <input type="text" name="cep" id="cep" placeholder="Digite o cep:">                
+                <button class="btn btn-success" onclick="validaCEP()">Buscar</button>
+            </div>
+            <div class="cep__data">
+                <h1>Rua:</h1>
+                <span id="viacep_logradouro"></span>                
+                <h1>Cidade:</h1>
+                <span id="viacep_cidade"></span>
+                <h1>Estado:</h1>
+                <span id="viacep_estado"></span>
+                
+            </div>  
         </div>
     </div>
 

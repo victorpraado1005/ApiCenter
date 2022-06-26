@@ -16,23 +16,24 @@ body{
 .btn_container{
     display: flex;
     justify-content: space-around;
+    margin-bottom: 20px;
 }
 
 .api__weather__container{
     margin-top: 20px;
 }
 
-.weather_header{
+.container_header{
     display: flex;
     justify-content: space-between;
     margin-bottom: 30px;    
 }
 
-.weather_header h1{    
+.container_header h1{    
     font-size: 20px;
 }
 
-.weather_header button{
+.container_header button{
     width: 100px;
 }
 
@@ -77,7 +78,18 @@ body{
     order: 8;
 }
 
-.weather_data span{
+.cep__data{
+    display: grid;
+    grid-template-columns: 1fr 1fr;    
+    align-items: center;
+    row-gap: 10px;
+}
+
+.cep__data h1{
+    font-size: 28px;
+}
+
+span{
     font-size: 18px;
 }
 
