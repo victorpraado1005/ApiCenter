@@ -1,0 +1,37 @@
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container{
+    background-color: white;
+    border-radius: 30px;
+    padding: 40px;
+    opacity: 0.8;
+    width: 35%;
+    min-height: 350px;
+}
+
+.api__weather__container h1{
+    font-size: 25px;
+}
+
+.api__weather__container h4{
+    font-size: 20px;
+}
+
+.api_weather_background{
+    background-image: url(./assets/images/api_weather.jpg);
+    background-size: cover;
+}
+
+.api_money_background{
+    background-image: url(./assets/images/api_money.jpg);
+    background-size: cover;
+}
+
+.api_viacep_background{
+    background-image: url(./assets/images/api_viacep.jpg);
+    background-size: cover;
+}
