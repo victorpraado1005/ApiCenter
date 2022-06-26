@@ -8,9 +8,77 @@ body{
     background-color: white;
     border-radius: 30px;
     padding: 40px;
-    opacity: 0.8;
+    opacity: 0.9;
     width: 35%;
     min-height: 350px;
+}
+
+.btn_container{
+    display: flex;
+    justify-content: space-around;
+}
+
+.api__weather__container{
+    margin-top: 20px;
+}
+
+.weather_header{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;    
+}
+
+.weather_header h1{    
+    font-size: 20px;
+}
+
+.weather_header button{
+    width: 100px;
+}
+
+.weather_data{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+#city__name{
+    order: 1;
+}
+
+#temp__atual{
+    order: 2;
+}
+
+#temp__min{
+    order: 5;
+}
+
+#temp__max{
+    order: 6;
+}
+
+#weather_city_name{
+    order: 3;
+}
+
+#weather_temp{
+    order: 4;
+}
+
+#weather_temp_min{
+    order: 7;
+}
+
+#weather_temp_max{
+    order: 8;
+}
+
+.weather_data span{
+    font-size: 18px;
 }
 
 .api__weather__container h1{
@@ -22,16 +90,16 @@ body{
 }
 
 .api_weather_background{
-    background-image: url(./assets/images/api_weather.jpg);
+    background-image: url(./assets/images/api_weatherRedimensionada.jpg);
     background-size: cover;
 }
 
 .api_money_background{
-    background-image: url(./assets/images/api_money.jpg);
+    background-image: url(./assets/images/api_moneyRedimensionada.jpg);
     background-size: cover;
 }
 
 .api_viacep_background{
-    background-image: url(./assets/images/api_viacep.jpg);
+    background-image: url(./assets/images/api_viacepRedimensionada.jpg);
     background-size: cover;
 }

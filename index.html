@@ -10,9 +10,29 @@
 <body>
     
     <div class="container">
-        <button id="btnWeatherAPI" onclick="showWeatherAPI()">Weather API</button>
-        <button id="btnExchangeRatesAPI" onclick="showExchangeRatesAPI()">Exchange Rates API</button>
-        <button id="btnViaCepAPI" onclick="showViaCepAPI()">ViaCep API</button>
+        <div class="btn_container">
+            <button id="btnWeatherAPI" class="btn btn-primary" onclick="showWeatherAPI()">Weather API</button>
+            <button id="btnExchangeRatesAPI" class="btn btn-primary" onclick="showExchangeRatesAPI()">Exchange Rates API</button>
+            <button id="btnViaCepAPI" class="btn btn-primary" onclick="showViaCepAPI()">ViaCep API</button>
+        </div>
+
+        <div id="weatherAPI" class="api__weather__container" style="display: none;">
+            <div class="weather_header">
+                <H1>Digite a cidade:</H1>
+                <input type="text" name="city" id="city" placeholder="Digite a cidade que deseja buscar: ">
+                <button class="btn btn-success" onclick="weatherApi()">Buscar</button>
+            </div>
+            <div class="weather_data">
+                <h1 id="city__name">Nome da cidade:</h1>            
+                <span id="weather_city_name"></span>
+                <h1 id="temp__atual">Temperatura atual:</h1>
+                <span id="weather_temp"></span>
+                <h1 id="temp__min">Temperatura minima:</h1>
+                <span id="weather_temp_min"></span>
+                <h1 id="temp__max">Temperatura maxima:</h1>
+                <span id="weather_temp_max"></span>
+            </div>
+        </div>
 
         <div id="exchangeRatesAPI" class="api__change__container" style="display: none;">
             <H1>Valor da Moeda:</H1>
@@ -24,19 +44,7 @@
             <input type="button" value="Converter" onclick="converterMoeda()">
         </div>
     
-        <div id="weatherAPI" class="api__weather__container" style="display: none;">
-            <H1>Digite a cidade:</H1>
-            <input type="text" name="city" id="city" placeholder="Digite a cidade que deseja buscar: ">
-            <h1>Nome da cidade:</h1>
-            <h4 id="weather_city_name"></h4>
-            <h1>Temperatura atual:</h1>
-            <h4 id="weather_temp"></h4>
-            <h1>Temperatura minima:</h1>
-            <h4 id="weather_temp_min"></h4>
-            <h1>Temperatura maxima:</h1>
-            <h4 id="weather_temp_max"></h4>
-            <input type="button" value="Buscar" onclick="weatherApi()">
-        </div>
+        
 
         <div id="cepAPI" class="api__viaCep__container" style="display: none;">
             <h1>VALIDA CEP</h1>
