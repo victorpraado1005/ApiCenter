@@ -26,15 +26,20 @@ body{
 .container_header{
     display: flex;
     justify-content: space-between;
+    align-items: center;
     margin-bottom: 30px;    
 }
 
-.container_header h1{    
-    font-size: 20px;
+.api__weather__container .container_header h1{    
+  font-size: 18px;
 }
 
+.api__weather__container .container_header input{    
+    width: 150px;
+  }
+
 .container_header button{
-    width: 100px;
+    width: 80px;
 }
 
 .weather_data{
@@ -44,6 +49,10 @@ body{
     align-items: center;
     align-items: center;
     gap: 10px;
+}
+
+.api__weather__container .weather_data h1{
+    font-size: 18px;
 }
 
 #city__name{
@@ -78,6 +87,10 @@ body{
     order: 8;
 }
 
+.api__viaCep__container .container_header h1{
+    font-size: 18px;
+}
+
 .cep__data{
     display: grid;
     grid-template-columns: 1fr 1fr;    
@@ -86,7 +99,7 @@ body{
 }
 
 .cep__data h1{
-    font-size: 28px;
+    font-size: 24px;
 }
 
 span{
@@ -120,8 +133,8 @@ span{
     margin-bottom: 10px;
 }
 
-.currency__data input, select{
-    width: 200px;
+.api__change__container .currency__data input, select{
+    width: 150px;
 }
 
 .currency__result{
@@ -134,8 +147,8 @@ span{
     width: 150px;
 }
 
-.api__change__container h1{
-    font-size: 20px;
+.api__change__container .currency__data h5{
+    font-size: 16px;
 }
 
 .api_weather_background{
