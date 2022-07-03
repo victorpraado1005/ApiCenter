@@ -11,16 +11,27 @@ function weatherApi(){
     let finalURL = API_URL + API_KEY + "&q=" + string + "&days=1&aqi=no&alerts=no";
 
     fetch(finalURL).then((res)=>{
-        return res.json()
-    }).then((data)=>{
-        let weather_city_name = data.location.name
-        let weather_temp = data.current.temp_c
-        let weather_temp_min = data.forecast.forecastday[0].day.mintemp_c
-        let weather_temp_max = data.forecast.forecastday[0].day.maxtemp_c
-        document.getElementById("weather_city_name").innerHTML = weather_city_name
-        document.getElementById("weather_temp").innerHTML = weather_temp
-        document.getElementById("weather_temp_min").innerHTML = weather_temp_min
-        document.getElementById("weather_temp_max").innerHTML = weather_temp_max
+        return res.json()        
+    }).then((data)=>{        
+        if (data.error) {
+            document.getElementById("weather_city_name").innerHTML = ''
+            document.getElementById("weather_temp").innerHTML = ''
+            document.getElementById("weather_temp_min").innerHTML = ''
+            document.getElementById("weather_temp_max").innerHTML = ''
+            alert('Cidade não encontrada!')
+            document.getElementById("city").value=''            
+        } else{            
+            let weather_city_name = data.location.name
+            let weather_temp = data.current.temp_c
+            let weather_temp_min = data.forecast.forecastday[0].day.mintemp_c
+            let weather_temp_max = data.forecast.forecastday[0].day.maxtemp_c
+            document.getElementById("weather_city_name").innerHTML = weather_city_name
+            document.getElementById("weather_temp").innerHTML = weather_temp
+            document.getElementById("weather_temp_min").innerHTML = weather_temp_min
+            document.getElementById("weather_temp_max").innerHTML = weather_temp_max
+            document.getElementById("city").value=''
+        }
+        
     })
     
 }

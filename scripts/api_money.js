@@ -4,13 +4,19 @@ function converterMoeda(){
 
     let url = "https://economia.awesomeapi.com.br/"+ currency;
 
-    fetch(url).then((res)=>{
-        return res.json();
-    }).then((data)=>{
-        let rate = data[0].bid
-        let total = rate * totalConversao;
-        document.getElementById("conversao").innerHTML = total.toFixed(2);
-    })    
+    if (totalConversao == ''){
+        alert('Digitar a quantidade.')
+    }else{
+        fetch(url).then((res)=>{
+            return res.json();
+        }).then((data)=>{
+            let rate = data[0].bid
+            let total = rate * totalConversao;
+            document.getElementById("conversao").innerHTML = total.toFixed(2);
+        })
+    }
+    
+        
 }
 
 function getCurrency(){
