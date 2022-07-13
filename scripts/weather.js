@@ -1,4 +1,4 @@
-let API_URL = "http://api.weatherapi.com/v1/forecast.json?key="
+let API_URL = "https://api.weatherapi.com/v1/forecast.json?key="
 
 let API_KEY = "177f54f66a33404088153326222204"
 

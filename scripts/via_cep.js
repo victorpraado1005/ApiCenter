@@ -1,4 +1,4 @@
-let URL_VIACEP = "http://viacep.com.br/ws/"
+let URL_VIACEP = "https://viacep.com.br/ws/"
 
 let returnJson = "/json"
 
