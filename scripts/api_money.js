@@ -12,7 +12,9 @@ function converterMoeda(){
         }).then((data)=>{
             let rate = data[0].bid
             let total = rate * totalConversao;
-            document.getElementById("conversao").innerHTML = total.toFixed(2);
+            total = total.toFixed(2);
+            let totalAux = parseInt(total) 
+            document.getElementById("conversao").innerHTML = 'R$ ' + totalAux.toLocaleString('pt-BR');
         })
     }
     

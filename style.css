@@ -200,3 +200,10 @@ span{
         font-size: 16px;
     }
 }
+
+@media (max-width: 1010px){
+    .btn_container button{
+        margin-right: 5px;
+        font-size: 12px;
+    }
+}
