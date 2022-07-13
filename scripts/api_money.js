@@ -11,14 +11,12 @@ function converterMoeda(){
             return res.json();
         }).then((data)=>{
             let rate = data[0].bid
-            let total = rate * totalConversao;
-            total = total.toFixed(2);
-            let totalAux = parseInt(total) 
-            document.getElementById("conversao").innerHTML = 'R$ ' + totalAux.toLocaleString('pt-BR');
+            let total = rate * totalConversao;            
+            total = total.toLocaleString('pt-BR')                        
+            let totalAux = total.substring(0, total.length - 1)            
+            document.getElementById("conversao").innerHTML = 'R$ ' + totalAux;
         })
-    }
-    
-        
+    }            
 }
 
 function getCurrency(){
