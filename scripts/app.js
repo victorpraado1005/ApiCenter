@@ -1,6 +1,6 @@
 $(document).ready(function () {
-    $("body").addClass('api_money_background');
-    $("#exchangeRatesAPI").show()
+    $("body").addClass('api_viacep_background');
+    $("#cepAPI").show()
 })
 
 $("#btnWeatherAPI").click(()=>{            

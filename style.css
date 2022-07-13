@@ -12,6 +12,7 @@ body{
     width: 35%;
     min-height: 350px;
     min-width: 350px;
+    max-width: 550px;
 }
 
 .btn_container{
@@ -89,14 +90,21 @@ body{
 }
 
 .cep__data{
-    display: grid;
-    grid-template-columns: 1fr 1fr;    
-    align-items: center;
-    row-gap: 10px;
+    display: flex;
+    flex-direction: column;
 }
 
 .cep__data h1{
     font-size: 24px;
+}
+
+.cep_data_row{
+    display: flex;
+    /* align-items: center; */    
+}
+
+.cep_data_row h1{
+    margin-right: 20px;
 }
 
 span{
@@ -107,27 +115,32 @@ span{
     font-size: 20px;
 }
 
-.currency__data{    
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    justify-items: center;
-    align-items: center;  
+.currency__data{
+    border: 1px solid;
 }
 
-#total{
-    order: 3;
+.currency_body{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 30px 0;    
 }
 
-#currency{
-    order: 4;
+.currency_quantity{  
+    text-align: center;
 }
 
-.currency__data h5, input, select{
-    margin-bottom: 10px;
+.currency_quantity input{
+    padding: 4px;
 }
 
-.currency__data input, select{
-    width: 150px;
+.currency_rate{
+    text-align: center;
+}
+
+.currency_body input, select{
+    width: 120px;
+    height: 30px;
 }
 
 .currency__result{
@@ -140,8 +153,8 @@ span{
     width: 150px;
 }
 
-.currency__data h5{
-    font-size: 16px;
+.currency_body h5{
+    font-size: 18px;
 }
 
 .api_weather_background{
@@ -157,4 +170,33 @@ span{
 .api_viacep_background{
     background-image: url(./assets/images/api_viacepRedimensionada.jpg);
     background-size: cover;
+}
+
+@media (max-width: 1280px){
+    .container_header{
+        display: flex;
+        flex-direction: column;        
+    }
+
+    .container_header h1 ~ input{
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 1130px){
+    .weather_data h1{
+        font-size: 14px;
+    }
+
+    .weather_data span{
+        font-size: 16px;
+    }
+
+    .cep__data h1{
+        font-size: 18px;
+    }
+
+    .cep__data span{
+        font-size: 16px;
+    }
 }

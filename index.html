@@ -34,24 +34,6 @@
             </div>
         </div>
 
-        <div id="exchangeRatesAPI" class="api__change__container" style="display: none;">
-            <div class="currency__data">
-                <h5>Quantidade:</h5>
-                <input type="text" name="total" id="total" placeholder="Digite a quantidade">
-                <h5>Selecione a Moeda:</h5>
-                <select name="currency" id="currency">
-                    <option value="USD">Dólar</option>
-                    <option selected value="EUR">Euro</option>
-                    <option value="GBP">Libra</option>
-                </select>                                        
-            </div>
-            <div class="currency__result">         
-                <button class="btn btn-success" onclick="converterMoeda()">Converter</button>
-                <h4>Total:</h5>
-                <span id="conversao"></span>
-            </div>
-        </div> 
-
         <div id="cepAPI" class="api__viaCep__container" style="display: none;">
             <div class="container_header">
                 <h1>Valida CEP:</h1>
@@ -59,15 +41,42 @@
                 <button class="btn btn-success" onclick="validaCEP()">Buscar</button>
             </div>
             <div class="cep__data">
-                <h1>Rua:</h1>
-                <span id="viacep_logradouro"></span>                
-                <h1>Cidade:</h1>
+                <div class="cep_data_row">
+                    <h1>Rua:</h1>
+                    <span id="viacep_logradouro"></span> 
+                </div>
+                <div class="cep_data_row">
+                    <h1>Cidade:</h1>
                 <span id="viacep_cidade"></span>
-                <h1>Estado:</h1>
-                <span id="viacep_estado"></span>
-                
+                </div>               
+                <div class="cep_data_row">
+                    <h1>Estado:</h1>
+                    <span id="viacep_estado"></span>
+                </div>                                
             </div>  
         </div>
+
+        <div id="exchangeRatesAPI" class="api__change__container" style="display: none;">          
+                <div class="currency_body">
+                    <div class="currency_quantity">
+                        <h5>Quantidade:</h5>
+                        <input type="text" name="total" id="total" placeholder="Quantidade...">
+                    </div>
+                    <div class="currency_rate">
+                        <h5>Moeda:</h5>
+                        <select name="currency" id="currency">
+                            <option value="USD">Dólar</option>
+                            <option selected value="EUR">Euro</option>
+                            <option value="GBP">Libra</option>
+                        </select>
+                    </div>                                                
+                </div>
+            <div class="currency__result">         
+                <button class="btn btn-success" onclick="converterMoeda()">Converter</button>
+                <h4>Total:</h5>
+                <span id="conversao"></span>
+            </div>
+        </div>         
     </div>
 
     <!-- SCRIPTS -->
